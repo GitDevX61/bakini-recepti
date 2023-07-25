@@ -1,39 +1,3 @@
-/*
-.container {
-  height: 100%;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-}
-
-.heading {
-  color: white;
-  font-family: monospace;
-  text-align: center;
-  margin-top: 250px;
-}
-
-.recipes-container {
-  height: 800px;
-  width: 35%;
-  border: solid;
-  border-width: 1px;
-  margin: 0 auto;
-  position: relative;
-  background-color: white;
-}
-*/
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -42,7 +6,6 @@ body {
   background-color: #000000;
   font-family: Arial, sans-serif;
   color: #ffffff;
-  line-height: 1.5;
 }
 
 .hero { 
@@ -68,53 +31,50 @@ body {
 }
 
 .recipe-container {
+  box-sizing: border-box;
+  display: table;
+  height: 50%;
+  overflow: hidden;
   width: 50%;
-  height: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid black;
   background-color: white;
-  opacity: 1;
   z-index: 6;
 }
 
 .recipe-container-two {
-  max-width: 45%;
-  width: 60%;
-  border: solid;
-  border-width: 5px;
+  box-sizing: border-box;
+  height: auto;
   background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
 }
 
 .title-container {
   box-sizing: border-box;
   white-space: normal;
-
   margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .title {
   font-size: 40px;
+  font-weight: 700;
   color: black;
   margin: 0;
-  box-sizing: border-box;
   text-align: center;
+  padding-top: 30px;
 }
 
 .recipe-image-container {
   box-sizing: border-box;
-  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90%;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .recipe-image {
-  box-sizing: border-box;
   max-height: 100%;
   max-width: 100%;
 }
@@ -123,6 +83,168 @@ body {
   font-size: 20px;
   border: solid;
   border-width: 2px;
-  border-radius: 15px;
+  border-radius: 25px;
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+  transition: all 300ms ease;
+}
+
+.forward-button-container, .backward-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bckwrd-btn {
+  margin-left: 20px;
+}
+
+.frwrd-btn {
+  margin-right: 20px;
+}
+
+.enable-bckwrd-btn {
+  display: initial;
+}
+
+@media (max-width: 375px) {
+  .hero {
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 5;
+  }
+
+  &::before {  
+    content: "";
+    background-color: black;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+  .recipe-container {
+    background-color: white;
+    max-height: 300px;
+  }
+
+  .title-container {
+    z-index: 6;
+    background-color: white;
+  }
+
+  .title {
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .recipe-container-two {
+    box-sizing: border-box;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+  }
+
+  .btn {
+    font-size: 20px;
+    border: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+  .bckwrd-btn {
+    display: initial;
+    margin-left: 10px;
+  }
+
+  .frwrd-btn {
+    margin-right: 10px;
+  }
+
+}
+
+@media (min-width: 376px) and (max-width: 414px) {
+  .hero {
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 5;
+  }
+
+  &::before {  
+    content: "";
+    background-color: black;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+  .recipe-container {
+    max-height: 600px;
+    background-color: white;
+  }
+
+  .title-container {
+    z-index: 6;
+    background-color: white;
+  }
+
+  .title {
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .recipe-container-two {
+    box-sizing: border-box;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    height: 400px;
+  }
+
+  .btn {
+    font-size: 20px;
+    border: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+  .bckwrd-btn {
+    display: initial;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .frwrd-btn {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
 }
