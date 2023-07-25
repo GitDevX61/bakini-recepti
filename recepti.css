@@ -110,7 +110,7 @@ body {
   display: initial;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1024px) {
   .hero {
     position: relative; 
     height: 98vh;
@@ -135,8 +135,12 @@ body {
 }
 
   .recipe-container {
+    box-sizing: border-box;
+    display: table;
+    overflow: hidden;
+    border: 1px solid black;
     background-color: white;
-    max-height: 300px;
+    z-index: 6;
   }
 
   .title-container {
@@ -153,76 +157,19 @@ body {
     padding-top: 50px;
   }
 
-  .recipe-container-two {
+  .recipe-image-container {
     box-sizing: border-box;
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr;
-  }
-
-  .btn {
-    font-size: 20px;
-    border: solid;
-    border-width: 2px;
-    border-radius: 15px;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-  }
-
-  .bckwrd-btn {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .frwrd-btn {
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-
-}
-
-@media (min-width: 376px) and (max-width: 1024px) {
-  .hero {
-    position: relative; 
-    height: 98vh;
-    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 5;
-    font-family: monospace;
+    align-items: center;
+    height: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
   }
-
-  &::before {  
-    content: "";
-    background-color: black;
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.5;
-}
-
-  .recipe-container {
-    max-height: 600px;
-    background-color: white;
-  }
-
-  .title-container {
-    z-index: 6;
-    background-color: white;
-  }
-
-  .title {
-    font-size: 30px;
-    color: black;
-    font-weight: 700;
-    margin: 0;
-    text-align: center;
-    padding-top: 60px;
+  
+  .recipe-image {
+    max-height: 100%;
+    max-width: 100%;
   }
 
   .recipe-container-two {
@@ -230,7 +177,6 @@ body {
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
-    height: 400px;
   }
 
   .btn {
@@ -252,5 +198,4 @@ body {
     margin-right: 10px;
     margin-left: 10px;
   }
-
 }
