@@ -171,12 +171,13 @@ body {
   }
 
   .bckwrd-btn {
-    display: initial;
     margin-left: 10px;
+    margin-right: 10px;
   }
 
   .frwrd-btn {
     margin-right: 10px;
+    margin-left: 10px;
   }
 
 }
@@ -243,7 +244,6 @@ body {
   }
 
   .bckwrd-btn {
-    display: initial;
     margin-left: 10px;
     margin-right: 10px;
   }
