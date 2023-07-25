@@ -60,6 +60,7 @@ body {
   margin: 0;
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .recipe-image-container {
@@ -68,8 +69,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 90%;
-  margin: 0 auto;
-  padding-top: 50px;
 }
 
 .recipe-image {
@@ -140,7 +139,6 @@ body {
     overflow: hidden;
     border: 1px solid black;
     background-color: white;
-    z-index: 6;
   }
 
   .title-container {
@@ -149,12 +147,12 @@ body {
   }
 
   .title {
-    font-size: 30px;
+    font-size: 28px;
     color: black;
     font-weight: 700;
     margin: 0;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .recipe-image-container {
@@ -163,20 +161,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 90%;
-    margin: 0 auto;
-    padding-top: 50px;
   }
-  
+
   .recipe-image {
-    max-height: 100%;
-    max-width: 100%;
+    height: 100%;
   }
 
   .recipe-container-two {
-    box-sizing: border-box;
+    height: 450px;
     background-color: white;
     display: grid;
-    grid-template-columns: 1fr 200px 1fr;
+    grid-template-columns: 1fr 250px 1fr;
   }
 
   .btn {
@@ -189,11 +184,16 @@ body {
     height: 30px;
   }
 
+  .forward-button-container, .backward-button-container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .bckwrd-btn {
-    margin-left: 10px;
+    margin: 0 auto;
   }
 
   .frwrd-btn {
-    margin-right: 10px;
+    margin: 0 auto;
   }
 }
