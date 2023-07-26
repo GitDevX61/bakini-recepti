@@ -10,7 +10,7 @@ body {
 
 .hero { 
   position: relative; 
-  height: 98vh;
+  height: 99vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -112,7 +112,7 @@ body {
 @media (max-width: 1024px) {
   .hero {
     position: relative; 
-    height: 98vh;
+    height: 99vh;
     width: 100%;
     display: flex;
     align-items: center;
